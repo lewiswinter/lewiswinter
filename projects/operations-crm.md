@@ -87,8 +87,34 @@ I combined operational knowledge and process improvement with hands-on product d
 
 The aim was to simplify the work and make the operation easier to run.
 
+## From fragmented tools to one operational workflow
+
+```mermaid
+flowchart LR
+    A["Multiple Google Sheets"] --> D["Repeated entry and reconciliation"]
+    B["Separate contacts application"] --> D
+    C["Manual emails"] --> D
+    D --> E["Integrated operations CRM"]
+    E --> F["Shared client and booking records"]
+    E --> G["Scheduling and reminders"]
+    E --> H["Revenue and performance reporting"]
+```
+
+## Platform walkthrough
+
+Four anonymised demonstration screenshots are ready to add to this section:
+
+| View | What it demonstrates |
+| --- | --- |
+| **Nursery record** | Shared booking history, client contacts, reminders and internal activity; financial account details covered |
+| **Field schedule** | Team assignments and booking visibility across the working calendar |
+| **Revenue dashboard** | Revenue, order rate, average order value and client-level performance |
+| **Revenue scenario modelling** | Adjustable assumptions and **modelled**, not realised, revenue opportunities |
+
+*All screenshot names and figures are fictional demonstration data. The screenshot files will be embedded once uploaded to this repository.*
+
 ## Project material
 
 The production application and its source repository remain private. This public case study describes the operational challenge, approach and outcomes without publishing internal data or proprietary code.
 
-*Screenshots and a sanitised workflow diagram can be added once cleared for public sharing.*
+*The workflow diagram above is published. Four anonymised screenshots are prepared for upload; they are not yet hosted in this repository.*
