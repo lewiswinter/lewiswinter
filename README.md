@@ -42,11 +42,11 @@ Built a proof-of-concept system that brings together contract information, suppo
 
 **Focus:** Business process automation · AI document intelligence · Risk management · Human review
 
-### Automated Image Processing
+### [Image Editing Automation & AI Vision Experiment](projects/image-editing-automation-ai-vision.md)
 
-Developed and iteratively tested an automated image-processing workflow, using performance evaluation to improve consistency and reduce manual work.
+Built production black-and-white image automation integrated with Netlife APIs, alongside a locally evaluated computer vision experiment for automated crop selection.
 
-**Focus:** Automation · Continuous improvement · Quality assurance · AI evaluation
+**Focus:** Production automation · API integration · Local image processing · Computer vision evaluation
 
 ## Beyond the technology
 
