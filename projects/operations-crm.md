@@ -102,19 +102,36 @@ flowchart LR
 
 ## Platform walkthrough
 
-Four anonymised demonstration screenshots are ready to add to this section:
+The following screenshots use fictional demonstration data and show the operational platform and reporting tools.
 
-| View | What it demonstrates |
-| --- | --- |
-| **Nursery record** | Shared booking history, client contacts, reminders and internal activity; financial account details covered |
-| **Field schedule** | Team assignments and booking visibility across the working calendar |
-| **Revenue dashboard** | Revenue, order rate, average order value and client-level performance |
-| **Revenue scenario modelling** | Adjustable assumptions and **modelled**, not realised, revenue opportunities |
+### 1. Centralised client record
 
-*All screenshot names and figures are fictional demonstration data. The screenshot files will be embedded once uploaded to this repository.*
+Booking history, client details, reminders and activity are available from a single record, rather than being maintained across separate spreadsheets and a contacts application.
+
+![Anonymised CRM client record with booking details and operational activity](images/01-nursery-record.png)
+
+### 2. Field scheduling
+
+A shared schedule makes assignments and booking activity visible across the team, helping identify gaps and coordinate operational work.
+
+![Field scheduling view of the operations CRM](images/02-field-schedule.png)
+
+### 3. Revenue and performance dashboard
+
+Revenue reporting supports analysis of client performance, average order value, order rate and other commercial indicators.
+
+![Revenue and commercial performance dashboard using fictional data](images/03-revenue-dashboard.png)
+
+### 4. Revenue scenario modelling
+
+Adjustable assumptions help explore potential revenue opportunities. **These are modelled scenarios, not realised financial results.**
+
+![Revenue scenario modelling interface using fictional figures](images/04-revenue-scenario-modelling.png)
+
+*All client names, contacts and figures shown in the screenshots are fictional demonstration data.*
 
 ## Project material
 
 The production application and its source repository remain private. This public case study describes the operational challenge, approach and outcomes without publishing internal data or proprietary code.
 
-*The workflow diagram above is published. Four anonymised screenshots are prepared for upload; they are not yet hosted in this repository.*
+*The workflow diagram and four demonstration screenshots are included above.*
