@@ -56,5 +56,5 @@ I believe the best improvements come from understanding the business first — a
 
 ---
 
-**Based near Bristol, UK**  
+**Based in the UK**  
 Interested in Operations Leadership, Strategy & Operations, Business Transformation and practical AI implementation.
