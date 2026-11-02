@@ -21,7 +21,7 @@ The process is designed around a straightforward production sequence:
 4. Check processing status and return the output to the appropriate gallery.
 5. Keep the workflow visible to an operator, including progress and exceptions.
 
-**Why this matters:** it replaces a repetitive production task with a repeatable workflow, while keeping the existing ordering and gallery environment as the system of record. The black-and-white automation is **in production**. No unverified time-saving figure is claimed here.
+**Business impact:** the production automation reduced proofing time by removing repetitive black-and-white editing and upload steps. Making black-and-white alternatives available in the gallery also helped increase average order value. The workflow retains the existing ordering and gallery environment as the system of record. The black-and-white automation is **in production**.
 
 ### EditDesk interface
 
