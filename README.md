@@ -36,12 +36,6 @@ Implemented a production AI-assisted workflow to manage recruitment administrati
 
 **Focus:** AI implementation · Workflow automation · Human oversight · Operational efficiency
 
-### Contract Intelligence & Renewal Monitoring
-
-Built a proof-of-concept system that brings together contract information, supporting documents and correspondence across different systems to identify potential renewal risks and recommend next actions.
-
-**Focus:** Business process automation · AI document intelligence · Risk management · Human review
-
 ### [Image Editing Automation & AI Vision Experiment](projects/image-editing-automation-ai-vision.md)
 
 Built production black-and-white image automation integrated with Netlife APIs, alongside a locally evaluated computer vision experiment for automated crop selection.
