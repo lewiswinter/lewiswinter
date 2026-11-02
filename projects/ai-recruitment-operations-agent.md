@@ -27,19 +27,29 @@ The goal was to reduce time spent searching for exceptions and composing routine
 
 ## What the system looks like in practice
 
-The accompanying three-page product walkthrough illustrates the workflow using **10 fictional candidate records**:
+The following three screenshots show the working interface using **fictional candidate records**.
 
-| Screen | Operational value |
-| --- | --- |
-| **Candidate pipeline** | A single view of candidate stage, hiring manager, interview dates, feedback deadlines and last activity, with headline counts of missing owners, overdue feedback, incomplete records and stalled stages |
-| **Attention needed** | Deterministic checks produce a consistent, prioritised exception queue with the reason for each flag and a suggested next action |
-| **Ask the agent to investigate** | An optional AI agent reviews the pipeline, identifies the three most important issues, explains urgency, business impact and uncertainty, and prepares editable follow-up drafts |
+### 1. Candidate pipeline
 
-The third screen is particularly useful evidence of the system's design: the agent's response shows **priorities, supporting evidence, why each issue matters, a proposed action and a draft communication**. The user can edit, copy, discard or approve the draft locally. The demonstration explicitly indicates that no emails were sent.
+The central view brings together candidate stage, hiring-manager ownership, interview dates, feedback deadlines and recent activity. Summary indicators highlight where recruitment coordination needs attention.
 
-The sample also shows why combining rules with AI is useful. A missing hiring manager is flagged deterministically, but the AI can explain why that missing ownership blocks progress and recommend a coordinator-led verification rather than assigning someone automatically.
+![Candidate pipeline overview with stage, ownership and deadline information](images/1%20Candidate%20Pipeline.png)
 
-*The screenshots use synthetic records and demonstrate functionality; they are not a claim about live candidate counts or achieved recruitment outcomes.*
+### 2. Attention needed
+
+Deterministic checks surface overdue feedback, missing owners, incomplete information and stalled stages. Each finding includes a reason and a suggested action, providing a consistent operational queue before the optional AI agent is used.
+
+![Rules-based attention queue showing prioritised recruitment issues and follow-up actions](images/2%20Data.png)
+
+### 3. AI investigation and supported action
+
+The optional agent reviews the pipeline, identifies the most important issues and explains the evidence, urgency and potential business impact. It then prepares editable follow-up drafts for human review. The annotations highlight the agent prompt, response and supported action.
+
+![Annotated AI agent response showing prioritised findings and editable follow-up draft](images/3%20Ask%20Agent%20to%20invesitgate.png)
+
+The agent does not assign hiring managers, make hiring decisions or send emails automatically. The demonstration indicates that the drafts remain unsent.
+
+*The screenshots use synthetic records; they do not represent actual live candidate counts or measured recruitment outcomes.*
 
 ## How I approached it
 
