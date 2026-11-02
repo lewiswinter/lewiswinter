@@ -77,7 +77,7 @@ Because the CRM supports live bookings, communications and operational records, 
 
 **Permission and adversarial tests.** Security validation checked that users could access only the records and actions permitted by their role. Tests also reproduced an activity-log actor-spoofing issue before the fix, then confirmed that attempts to submit another user's identity were rejected, while authorised activity remained possible. Production role checks verified restricted activity visibility for photographers and denied anonymous access.
 
-**Automated testing and release checks.** Claude-assisted development included targeted security tests, functional checks and regression testing. At a recorded security-hardening checkpoint, **31 focused tests**, **241 SQL/security tests** and **2,104 tests in the full Vitest suite** passed locally. Checks also covered type safety and linting. Smoke and role-based checks were used to validate behaviour around releases, including key access boundaries.
+**Automated testing and release checks.** Claude-assisted development included targeted security tests, functional checks and regression testing. At a recorded security-hardening checkpoint, **31 focused tests**, **241 SQL/security tests** and **2,104 tests in the full Vitest suite** passed locally. Checks also covered type safety and linting. Post-change production role checks validated key access boundaries.
 
 **Operational traceability.** Shared booking statuses, assigned actions and activity history support accountability across a multi-user operation. The production repository and customer records are private; screenshots in this portfolio use fictional demonstration data.
 
