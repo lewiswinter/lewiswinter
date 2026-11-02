@@ -2,7 +2,7 @@
 
 **Operational improvement · Process redesign · Systems development · Change management**
 
-> **The objective:** Reduce manual administration and give teams a clearer, shared view of bookings, responsibilities and progress.
+> **The objective:** Replace fragmented booking administration with a simpler operational platform that improves accuracy, makes work easier to manage and enables commercial performance analysis.
 
 ## At a glance
 
@@ -22,6 +22,7 @@ Bookings were entered manually across multiple Google Sheets and a separate cont
 1. **Time-consuming administration.** Entering one booking across several systems repeated work and took approximately 4–5 minutes.
 2. **Multiple sources of truth.** Records could become inconsistent across systems, with opportunities for human error both when entering bookings and when preparing emails.
 3. **Limited performance insight.** Legacy applications made it difficult to extract usable data for reporting, trend analysis and future operational decisions.
+4. **Unnecessary complexity in alternatives.** Conventional CRMs offered more complexity than the team needed for its booking, reminder and operational workflows.
 
 The goal was therefore broader than replacing spreadsheets: **reduce administrative effort, improve data consistency and establish a reliable foundation for operational reporting and improvement.**
 
@@ -51,10 +52,13 @@ Organised the process around shared records, clear statuses, assigned actions an
 Designed and developed an internal CRM and operations platform, with capabilities including:
 
 - Searchable nursery records and booking history
-- Booking progress and operational dashboards
+- Booking progress, targets and year-on-year performance dashboards
+- Revenue analysis and client performance segmentation by quartile
+- Staff performance reporting using average order value and order rate
 - Scheduling and workflow visibility
 - Tasks, notes, ownership and activity history
-- Smart filters for overdue actions and booking gaps
+- Smart filters for overdue actions, booking gaps and clients not yet rebooked
+- Internal reminders to prompt follow-up without relying on cumbersome external CRM workflows
 - Multi-user access and permissions
 
 **Technical implementation:** Next.js, TypeScript and Supabase (PostgreSQL and authentication), with operational dashboards and supporting workflows.
@@ -69,7 +73,11 @@ Designed the platform around the people using it, with clearer day-to-day workfl
 
 **Better data consistency and operational visibility.** Shared records reduced reliance on separate sources of truth, while booking progress, task ownership and activity history made it easier to understand what had happened and what needed attention next.
 
-**A foundation for analysis.** Structured records and dashboards made operational data more accessible for performance monitoring and future improvements.
+**Commercial performance intelligence.** Revenue dashboards made it possible to review client performance, segment clients into quartiles and assess staff performance through average order value and order rate. Booking targets and year-on-year comparisons supported more informed planning.
+
+**Clearer operational control.** The team could see which clients were booked or still needed attention, use straightforward internal reminders and identify bottlenecks without relying on a complex general-purpose CRM.
+
+**A foundation for further analysis.** Consolidated, structured data also created opportunities to extend reporting into areas such as regional performance; this is a potential extension rather than a claimed delivered feature.
 
 **A foundation for growth.** Bringing operational information and workflows together created a more consistent platform for managing seasonal volume and further improvements.
 
