@@ -1,121 +1,55 @@
 # AI Recruitment Operations Agent
 
-**Turning recruitment follow-up into a structured, reviewable workflow**
+**A production tool for spotting recruitment delays and preparing the next action**
 
-Recruitment across a distributed workforce involves more than screening applications. Hiring managers need to respond, candidate records need to be complete, and someone has to keep track of what is waiting on whom. When this work sits across inboxes and spreadsheets, delays are easy to miss.
+Recruiting a distributed, seasonal workforce creates a lot of small dependencies: a manager has not returned feedback, an application is missing information, or a candidate has been sitting at the same stage for too long.
 
-I built and put into production an AI-assisted recruitment operations workflow to surface coordination issues automatically, while keeping decisions and external communications under human control.
+I built a recruitment operations tool that turns those records into a prioritised list of issues. An AI assistant can investigate the queue, explain what needs attention and prepare follow-up drafts. **The person running recruitment remains responsible for decisions and sending communications.**
 
-> **Status:** In production. The technical testing described below used 10 fictional candidate records; those test records should not be confused with live recruitment data. Any time savings below are illustrative estimates, not measured results.
+## The workflow
 
-## At a glance
+1. **Track the pipeline.** Candidate stage, hiring-manager ownership, interview dates, deadlines and activity sit in one view.
+2. **Surface exceptions.** Explicit rules flag overdue feedback, missing ownership or information and stalled applications.
+3. **Investigate and prepare.** The AI assistant reviews available records, identifies priorities and drafts suggested follow-ups for approval.
 
-| | |
-| --- | --- |
-| **Business challenge** | Recruitment coordination depends on repeatedly checking candidate status, outstanding information and hiring-manager feedback |
-| **Solution** | Rules-based checks paired with an AI assistant that investigates issues, prioritises next steps and prepares draft follow-ups |
-| **My role** | Defined the operational problem, designed the workflow, built and tested the application and AI integration |
-| **Safeguards** | Fictional test data, server-held API keys, validated tool actions, bounded agent execution and human approval before communications |
-| **Technology** | TypeScript, AI tool calling via an OpenAI-compatible provider, automated tests |
-| **Evidence** | Production use, with working end-to-end tool calling; 34 tests and build passing at the recorded development checkpoint |
+The distinction between rules and AI matters. An overdue deadline is determined from the record, not guessed by a language model; AI helps interpret the context and formulate a useful next step.
 
-## The operational problem
+## What it looks like
 
-Recruitment creates many small administrative dependencies. A candidate may be waiting for feedback, a hiring manager may not have been assigned, or information required to progress an application may still be missing. Individually these are straightforward; across a busy hiring campaign they compete for attention.
+These three screens use **fictional candidate records** to show the working interface.
 
-The goal was to reduce time spent searching for exceptions and composing routine follow-ups, so the person coordinating recruitment could focus on resolving blockers.
+### Candidate pipeline
 
-## What the system looks like in practice
+A shared view of applications, ownership and outstanding feedback.
 
-The following three screenshots show the working interface using **fictional candidate records**.
+![Candidate pipeline with stages, ownership and feedback deadlines](images/1%20Candidate%20Pipeline.png)
 
-### 1. Candidate pipeline
+### Attention queue
 
-The central view brings together candidate stage, hiring-manager ownership, interview dates, feedback deadlines and recent activity. Summary indicators highlight where recruitment coordination needs attention.
+Rules identify issues, explain why they were flagged and propose a next step.
 
-![Candidate pipeline overview with stage, ownership and deadline information](images/1%20Candidate%20Pipeline.png)
+![Attention queue with prioritised recruitment issues](images/2%20Data.png)
 
-### 2. Attention needed
+### Agent investigation
 
-Deterministic checks surface overdue feedback, missing owners, incomplete information and stalled stages. Each finding includes a reason and a suggested action, providing a consistent operational queue before the optional AI agent is used.
+The assistant presents its top priorities with supporting evidence and an editable follow-up draft. The annotations highlight the question, response and proposed action.
 
-![Rules-based attention queue showing prioritised recruitment issues and follow-up actions](images/2%20Data.png)
+![Annotated AI agent investigation and draft follow-up](images/3%20Ask%20Agent%20to%20invesitgate.png)
 
-### 3. AI investigation and supported action
+## Implementation and safeguards
 
-The optional agent reviews the pipeline, identifies the most important issues and explains the evidence, urgency and potential business impact. It then prepares editable follow-up drafts for human review. The annotations highlight the agent prompt, response and supported action.
+I defined the recruitment checks, built the interface and connected an AI assistant to a small set of tools for reading candidate and attention records and preparing drafts. The application uses **TypeScript and structured AI tool calls**.
 
-![Annotated AI agent response showing prioritised findings and editable follow-up draft](images/3%20Ask%20Agent%20to%20invesitgate.png)
+Provider credentials remain server-side. Tool actions are validated and agent runs are bounded. The assistant does **not** autonomously reject applicants, assign hiring managers or send emails. Draft communications require human review.
 
-The agent does not assign hiring managers, make hiring decisions or send emails automatically. The demonstration indicates that the drafts remain unsent.
+The system passed **34 automated tests and a build** at a recorded development checkpoint, including an end-to-end AI tool-calling flow. The workflow is now **in production**.
 
-*The screenshots use synthetic records; they do not represent actual live candidate counts or measured recruitment outcomes.*
+## Operational value
 
-## How I approached it
+Instead of opening each candidate record to work out what is late or missing, the coordinator starts with the exceptions that need attention. The agent helps turn those findings into a practical follow-up, without taking control of recruitment decisions.
 
-### 1. Translate operational issues into explicit checks
-
-I started with a fictional candidate dataset and defined deterministic rules for issues such as:
-
-- Overdue hiring-manager feedback
-- Missing candidate or process information
-- Candidates stalled in a stage for more than seven days
-
-The checks identify what needs attention. This matters because a language model should not be the sole source of truth for whether a deadline has been missed.
-
-### 2. Build an actionable queue
-
-The application groups findings into an attention queue rather than leaving the user to inspect every candidate individually. The interface also includes a dashboard and draft queue, so an issue can move from identification to a proposed next action.
-
-### 3. Add an AI assistant with narrow tools
-
-The assistant can use defined functions to list candidates, inspect attention items and create follow-up drafts. Its role is to interpret the operational context, help identify priorities and prepare communications for review—not to make hiring decisions.
-
-```mermaid
-flowchart LR
-    A["Candidate records"] --> B["Rules identify exceptions"]
-    B --> C["Attention queue"]
-    C --> D["AI reviews available evidence"]
-    D --> E["Suggested priorities and draft follow-ups"]
-    E --> F["Human reviews and acts"]
-```
-
-### 4. Put limits around the automation
-
-The implementation keeps provider credentials on the server and validates tool actions. Agent runs are bounded to prevent uncontrolled loops. Drafts remain drafts: the agent does not autonomously send emails, reject applicants or make hiring decisions.
-
-## Implementation and testing
-
-The application successfully completed an end-to-end AI tool-calling flow and passed 34 tests and its build at a recorded development checkpoint. The workflow is now used in production.
-
-The build combined deterministic checks for operational exceptions with constrained AI tool use and a human-review step for drafted communications. Testing covered the end-to-end tool-calling workflow and application build, with 34 tests passing at the recorded checkpoint.
-
-The design deliberately separates identifying a recruitment blocker from recommending how to resolve it. This keeps the assistant focused on actionable coordination rather than allowing it to make hiring decisions or send messages independently.
-
-## Potential operational impact
-
-For planning purposes, I modelled a recruitment coordination task falling from **2 hours to 30 minutes per week**. That would represent **90 minutes of potential weekly capacity**, or **18 hours over a 12-week campaign**.
-
-**This is a scenario estimate, not an observed saving.** A measured baseline and comparison of time spent would be needed before presenting this estimate as an achieved saving.
-
-## Future development opportunities
-
-The production workflow provides a foundation for extending recruitment operations intelligence. Areas for future development include:
-
-1. **Recruitment performance reporting:** trends in time-to-feedback, stage progression and recurring bottlenecks.
-2. **More proactive coordination:** configurable reminders and escalation thresholds tailored to different hiring campaigns.
-3. **Deeper system integration:** connect relevant recruitment and people workflows to reduce manual hand-offs.
-4. **Management insight:** summarise workload, outstanding dependencies and campaign progress across teams.
-5. **Continuous evaluation:** use operational feedback and measured outcomes to guide further refinements.
-
-These are potential extensions to the existing workflow, not prerequisites for its current use.
-
-## Why this project matters
-
-This project is an example of applying AI to a specific operational problem: understand the work, define reliable rules, introduce AI only where interpretation or drafting helps, and test the whole workflow against the realities of daily use.
-
-It also reinforced an important lesson: the quality of an AI-enabled process depends as much on exception handling, ownership and human judgement as on the model itself.
+This is an operational tool used to manage work, not an autonomous hiring system. I have not presented a hypothetical time saving as an achieved result.
 
 ---
 
-[← Back to portfolio](../README.md) · [Operations CRM case study](operations-crm.md)
+[← Back to portfolio](../README.md) · [Operations CRM](operations-crm.md) · [Image automation and AI vision](image-editing-automation-ai-vision.md)
