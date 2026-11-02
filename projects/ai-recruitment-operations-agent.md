@@ -48,7 +48,7 @@ The system passed **34 automated tests and a build** at a recorded development c
 
 Instead of opening each candidate record to work out what is late or missing, the coordinator starts with the exceptions that need attention. The agent helps turn those findings into a practical follow-up, without taking control of recruitment decisions.
 
-This is an operational tool used to manage work, not an autonomous hiring system. I have not presented a hypothetical time saving as an achieved result.
+It makes the hand-off from identifying a recruitment problem to taking action clearer, while leaving the final decision with the coordinator.
 
 ---
 
