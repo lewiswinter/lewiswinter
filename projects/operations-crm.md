@@ -67,19 +67,20 @@ Designed and developed an internal CRM and operations platform, with capabilitie
 
 Designed the platform around the people using it, with clearer day-to-day workflows and visibility into outstanding work. Continued iteration focused on reducing friction and improving the information available to staff.
 
-## Testing, security and operational safeguards
+## Platform reliability, security and quality assurance
 
-The CRM supports a live, multi-user operational process, so dependable records and controlled access matter as much as the interface.
+Because the CRM supports live bookings, communications and operational records, I treated testing, access control and data protection as core parts of the development process.
 
-**Access and data protection.** The application uses Supabase authentication and PostgreSQL row-level security (RLS) to support access controls. Permissions are part of the platform design, rather than relying solely on what the interface chooses to display.
+**AI-assisted security review.** I used Claude Code to support structured reviews of the application and Supabase database configuration, examining authentication, API access, row-level security, database function permissions and potential privilege escalation. Findings were translated into specific fixes and tested before release.
 
-**Traceability and workflow control.** Activity history, assigned actions and clear booking statuses make changes and hand-offs easier to follow. Centralised records also reduce the need to copy sensitive operational information between disconnected tools.
+**Database security hardening.** A production security phase addressed **15 mutable `search_path` findings** and removed unnecessary anonymous access to privileged database functions. Later hardening tightened table-level privileges, including removing anonymous grants across **40 tables**. These were verified against the production database, rather than left as recommendations.
 
-**Testing and release discipline.** Changes to booking, scheduling and communication workflows need to be checked against expected behaviour, including edge cases and regressions. Particular attention goes to ensuring that batch communication actions are handled as distinct recipient-level operations and that reporting does not silently misrepresent booking or order records.
+**Permission and adversarial tests.** Security validation checked that users could access only the records and actions permitted by their role. Tests also reproduced an activity-log actor-spoofing issue before the fix, then confirmed that attempts to submit another user's identity were rejected, while authorised activity remained possible. Production role checks verified restricted activity visibility for photographers and denied anonymous access.
 
-**Security boundaries.** The production source code and operational records remain private; the public portfolio uses fictional demonstration screenshots. Technical security oversight is supported by specialist expertise rather than presented here as an independent security certification.
+**Automated testing and release checks.** Claude-assisted development included targeted security tests, functional checks and regression testing. At a recorded security-hardening checkpoint, **31 focused tests**, **241 SQL/security tests** and **2,104 tests in the full Vitest suite** passed locally. Checks also covered type safety and linting. Smoke and role-based checks were used to validate behaviour around releases, including key access boundaries.
 
-*This section describes the platform's controls and testing priorities; it does not claim an external security audit, penetration test or certification.*
+**Operational traceability.** Shared booking statuses, assigned actions and activity history support accountability across a multi-user operation. The production repository and customer records are private; screenshots in this portfolio use fictional demonstration data.
+
 
 ## Business impact
 
