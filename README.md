@@ -10,7 +10,7 @@ Alongside managing the day-to-day operation, I've redesigned processes and built
 
 | Outcome | Context |
 | --- | --- |
-| **~30% reduction in annual operating costs** | Wider operational and digital changes across the business, not a result attributed to one software project |
+| **~30% reduction in annual operating costs** | Delivered through a business-wide modernisation and digital transformation programme I led, including process redesign, digitisation and operating-cost improvements |
 | **75–80% less booking administration time** | A redesigned process reduced a typical booking from roughly 4–5 minutes to around 1 minute |
 | **~100–133 hours of annual admin capacity** | Estimated from approximately 2,000 bookings per year |
 | **~40 photographers trained** | Recruitment, training and operational consistency across a seasonal workforce |
