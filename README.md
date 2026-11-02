@@ -30,7 +30,7 @@ Designed and developed a custom operational platform to bring fragmented process
 
 **Focus:** Operational improvement · Process mapping · Systems integration · Change management
 
-### AI Recruitment Operations Agent
+### [AI Recruitment Operations Agent](projects/ai-recruitment-operations-agent.md)
 
 Developed a workflow to help manage recruitment administration, surface outstanding actions and prepare communications while keeping people in control of decisions.
 
