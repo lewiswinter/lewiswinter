@@ -27,7 +27,9 @@ The process is designed around a straightforward production sequence:
 
 The image below illustrates the workflow and job-progress interface. It uses anonymised/example data.
 
-*Screenshot to be added: EditDesk job queue, processing status and gallery upload.*
+![EditDesk production black-and-white automation interface](images/ED1.png)
+
+*EditDesk: local image processing and Netlife gallery workflow.*
 
 ## 2. AI vision experiment — can automated cropping match a human editor?
 
@@ -65,7 +67,9 @@ These are **experimental evaluation results**, not a claim that automated croppi
 
 The visual compares the original studio image, the human-selected target and two detection approaches. The confidence values displayed in the illustration are **demonstration values, not measured experiment scores**.
 
-*Screenshot to be added: vision model comparison and crop-selection experiment.*
+![AI vision crop experiment comparing reference and predicted crops](images/EX2.png)
+
+*AI vision experiment: visual comparison of crop-selection approaches.*
 
 ## 3. Operational approach and safeguards
 
