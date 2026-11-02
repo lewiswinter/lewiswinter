@@ -67,6 +67,20 @@ Designed and developed an internal CRM and operations platform, with capabilitie
 
 Designed the platform around the people using it, with clearer day-to-day workflows and visibility into outstanding work. Continued iteration focused on reducing friction and improving the information available to staff.
 
+## Testing, security and operational safeguards
+
+The CRM supports a live, multi-user operational process, so dependable records and controlled access matter as much as the interface.
+
+**Access and data protection.** The application uses Supabase authentication and PostgreSQL row-level security (RLS) to support access controls. Permissions are part of the platform design, rather than relying solely on what the interface chooses to display.
+
+**Traceability and workflow control.** Activity history, assigned actions and clear booking statuses make changes and hand-offs easier to follow. Centralised records also reduce the need to copy sensitive operational information between disconnected tools.
+
+**Testing and release discipline.** Changes to booking, scheduling and communication workflows need to be checked against expected behaviour, including edge cases and regressions. Particular attention goes to ensuring that batch communication actions are handled as distinct recipient-level operations and that reporting does not silently misrepresent booking or order records.
+
+**Security boundaries.** The production source code and operational records remain private; the public portfolio uses fictional demonstration screenshots. Technical security oversight is supported by specialist expertise rather than presented here as an independent security certification.
+
+*This section describes the platform's controls and testing priorities; it does not claim an external security audit, penetration test or certification.*
+
 ## Business impact
 
 **Faster booking administration.** A task previously taking approximately 4–5 minutes could be completed in around 1 minute using the redesigned workflow. Across an estimated 2,000 bookings annually, that represents roughly **100–133 hours of administrative capacity**.
