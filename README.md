@@ -32,7 +32,7 @@ Designed and developed a custom operational platform to bring fragmented process
 
 ### [AI Recruitment Operations Agent](projects/ai-recruitment-operations-agent.md)
 
-Developed a workflow to help manage recruitment administration, surface outstanding actions and prepare communications while keeping people in control of decisions.
+Implemented a production AI-assisted workflow to manage recruitment administration, surface outstanding actions and prepare communications while keeping people in control of decisions.
 
 **Focus:** AI implementation · Workflow automation · Human oversight · Operational efficiency
 
