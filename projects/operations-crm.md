@@ -1,152 +1,95 @@
 # Operations CRM & Workflow Transformation
 
-**Operational improvement · Process redesign · Systems development · Change management**
+**From disconnected spreadsheets to a shared system for bookings, scheduling and performance reporting**
 
-> **The objective:** Replace fragmented booking administration with a simpler operational platform that improves accuracy, makes work easier to manage and enables commercial performance analysis.
+I led the redesign of booking administration for a nursery photography operation and built an internal CRM around how the team actually worked. The aim was to reduce repeated data entry, make outstanding work visible and give managers reliable information for day-to-day decisions.
 
-## At a glance
+## Results
 
-| Measure | Outcome |
+| Measure | Before | After |
+| --- | --- | --- |
+| Typical booking administration | Approximately 4–5 minutes | Around 1 minute |
+| Time spent per booking | — | **Approximately 75–80% lower** |
+| Annual capacity released | — | **Estimated 100–133 hours**, across roughly 2,000 bookings |
+
+*The annual capacity figure is an estimate based on typical handling times and booking volume, not a formal time-and-motion study.*
+
+## The problem
+
+Booking details lived in multiple Google Sheets and a separate contacts application. Staff repeated entries, prepared emails manually and checked different places to see what had been completed. This was particularly difficult during seasonal peaks, when bookings, photographers and production deadlines all needed coordinating.
+
+Off-the-shelf CRMs added complexity without fitting the way this business operated. I wanted one place for a nursery's history, its bookings, the next action and the information needed to manage performance.
+
+## My role and the solution
+
+I mapped the booking and follow-up processes, identified duplicated work, designed the new workflows and developed the application. I also worked through testing and iteration as the team began using it.
+
+The platform brought together:
+
+- **Client and booking records:** nursery details, booking history, notes, assigned actions and activity logs.
+- **Operational coordination:** field scheduling, progress boards, overdue items and reminders.
+- **Communications:** booking confirmations and follow-up workflows supported by shared information rather than repeated manual entry.
+- **Commercial reporting:** booking targets, year-on-year comparisons, revenue dashboards, client quartiles, average order value and order rate.
+
+Built using **Next.js, TypeScript and Supabase (PostgreSQL, authentication and row-level security)**. The application was developed for a multi-user operation with different staff permissions.
+
+### What changed
+
+| Previously | With the CRM |
 | --- | --- |
-| Booking administration | Reduced from approximately 4–5 minutes to around 1 minute per booking |
-| Estimated time reduction | Approximately 75–80% per booking |
-| Annual booking volume used for estimate | Approximately 2,000 |
-| Estimated annual capacity released | Approximately 100–133 administration hours |
+| Booking details entered in several systems | One shared booking record and history |
+| Updates and next steps checked manually | Clear statuses, ownership, reminders and outstanding actions |
+| Separate information needed for scheduling | A shared field schedule linked to the booking workflow |
+| Limited ability to compare performance | Structured reporting across clients, booking targets and revenue |
 
-Time saved is calculated from the difference in approximate handling time multiplied by annual booking volume.
-
-## The operational problem
-
-Bookings were entered manually across multiple Google Sheets and a separate contacts application, with emails also prepared manually. This created three connected operational problems:
-
-1. **Time-consuming administration.** Entering one booking across several systems repeated work and took approximately 4–5 minutes.
-2. **Multiple sources of truth.** Records could become inconsistent across systems, with opportunities for human error both when entering bookings and when preparing emails.
-3. **Limited performance insight.** Legacy applications made it difficult to extract usable data for reporting, trend analysis and future operational decisions.
-4. **Unnecessary complexity in alternatives.** Conventional CRMs offered more complexity than the team needed for its booking, reminder and operational workflows.
-
-The goal was therefore broader than replacing spreadsheets: **reduce administrative effort, improve data consistency and establish a reliable foundation for operational reporting and improvement.**
-
-### Before and after
-
-| Before: fragmented workflow | After: integrated operational platform |
-| --- | --- |
-| Re-enter booking details across Google Sheets and a contacts application | Centralised booking records and history |
-| Multiple records to reconcile and manually prepared emails | Shared records and communication workflows supported by the system |
-| Limited ability to extract data for analysis | Structured operational data and dashboards |
-| Progress checked across different tools | Shared dashboards, task ownership and workflow visibility |
-
-*The comparison describes the workflow redesign; it does not imply every communication is fully automated or that errors have been eliminated.*
-
-## Approach: understand, map, improve, implement, measure
-
-### 1. Understand and map the work
-
-Reviewed how bookings moved from initial contact through confirmation, scheduling and subsequent operational stages. Identified where information was repeatedly entered, where hand-offs created uncertainty and where staff needed better visibility.
-
-### 2. Redesign the workflow
-
-Organised the process around shared records, clear statuses, assigned actions and consistent information. The intention was to make the next step obvious without requiring staff to piece together updates from separate sources.
-
-### 3. Build and integrate the system
-
-Designed and developed an internal CRM and operations platform, with capabilities including:
-
-- Searchable nursery records and booking history
-- Booking progress, targets and year-on-year performance dashboards
-- Revenue analysis and client performance segmentation by quartile
-- Staff performance reporting using average order value and order rate
-- Scheduling and workflow visibility
-- Tasks, notes, ownership and activity history
-- Smart filters for overdue actions, booking gaps and clients not yet rebooked
-- Internal reminders to prompt follow-up without relying on cumbersome external CRM workflows
-- Multi-user access and permissions
-
-**Technical implementation:** Next.js, TypeScript and Supabase (PostgreSQL and authentication), with operational dashboards and supporting workflows.
-
-### 4. Support adoption and improvement
-
-Designed the platform around the people using it, with clearer day-to-day workflows and visibility into outstanding work. Continued iteration focused on reducing friction and improving the information available to staff.
-
-## Platform reliability, security and quality assurance
-
-Because the CRM supports live bookings, communications and operational records, I treated testing, access control and data protection as core parts of the development process.
-
-**AI-assisted security review.** I used Claude Code to support structured reviews of the application and Supabase database configuration, examining authentication, API access, row-level security, database function permissions and potential privilege escalation. Findings were translated into specific fixes and tested before release.
-
-**Database security hardening.** A production security phase addressed **15 mutable `search_path` findings** and removed unnecessary anonymous access to privileged database functions. Later hardening tightened table-level privileges, including removing anonymous grants across **40 tables**. These were verified against the production database, rather than left as recommendations.
-
-**Permission and adversarial tests.** Security validation checked that users could access only the records and actions permitted by their role. Tests also reproduced an activity-log actor-spoofing issue before the fix, then confirmed that attempts to submit another user's identity were rejected, while authorised activity remained possible. Production role checks verified restricted activity visibility for photographers and denied anonymous access.
-
-**Automated testing and release checks.** Claude-assisted development included targeted security tests, functional checks and regression testing. At a recorded security-hardening checkpoint, **31 focused tests**, **241 SQL/security tests** and **2,104 tests in the full Vitest suite** passed locally. Checks also covered type safety and linting. Post-change production role checks validated key access boundaries.
-
-**Operational traceability.** Shared booking statuses, assigned actions and activity history support accountability across a multi-user operation. The production repository and customer records are private; screenshots in this portfolio use fictional demonstration data.
-
-
-## Business impact
-
-**Faster booking administration.** A task previously taking approximately 4–5 minutes could be completed in around 1 minute using the redesigned workflow. Across an estimated 2,000 bookings annually, that represents roughly **100–133 hours of administrative capacity**.
-
-**Better data consistency and operational visibility.** Shared records reduced reliance on separate sources of truth, while booking progress, task ownership and activity history made it easier to understand what had happened and what needed attention next.
-
-**Commercial performance intelligence.** Revenue dashboards made it possible to review client performance, segment clients into quartiles and assess staff performance through average order value and order rate. Booking targets and year-on-year comparisons supported more informed planning.
-
-**Clearer operational control.** The team could see which clients were booked or still needed attention, use straightforward internal reminders and identify bottlenecks without relying on a complex general-purpose CRM.
-
-**A foundation for further analysis.** Consolidated, structured data also created opportunities to extend reporting into areas such as regional performance; this is a potential extension rather than a claimed delivered feature.
-
-**A foundation for growth.** Bringing operational information and workflows together created a more consistent platform for managing seasonal volume and further improvements.
-
-## My role
-
-I combined operational knowledge and process improvement with hands-on product development: identifying the problem, mapping the workflow, designing the approach, building the platform and iterating around staff needs.
-
-The aim was to simplify the work and make the operation easier to run.
-
-## From fragmented tools to one operational workflow
-
-```mermaid
-flowchart LR
-    A["Multiple Google Sheets"] --> D["Repeated entry and reconciliation"]
-    B["Separate contacts application"] --> D
-    C["Manual emails"] --> D
-    D --> E["Integrated operations CRM"]
-    E --> F["Shared client and booking records"]
-    E --> G["Scheduling and reminders"]
-    E --> H["Revenue and performance reporting"]
-```
+The most useful change was not another dashboard. It was making the next action clear to the people coordinating the work.
 
 ## Platform walkthrough
 
-The following screenshots use fictional demonstration data and show the operational platform and reporting tools.
+These screenshots contain fictional demonstration records and figures.
 
-### 1. Centralised client record
+### Client record
 
-Booking history, client details, reminders and activity are available from a single record, rather than being maintained across separate spreadsheets and a contacts application.
+The nursery record brings together booking history, notes, reminders and related activity.
 
-![Anonymised CRM client record with booking details and operational activity](images/01-nursery-record.png)
+![CRM client record showing booking details and operational activity](images/01-nursery-record.png)
 
-### 2. Field scheduling
+### Field scheduling
 
-A shared schedule makes assignments and booking activity visible across the team, helping identify gaps and coordinate operational work.
+The schedule gives office staff a shared view of assignments and booking activity.
 
-![Field scheduling view of the operations CRM](images/02-field-schedule.png)
+![Field scheduling view in the operations CRM](images/02-field-schedule.png)
 
-### 3. Revenue and performance dashboard
+### Revenue reporting
 
-Revenue reporting supports analysis of client performance, average order value, order rate and other commercial indicators.
+Client and staff performance can be reviewed using average order value, order rate, targets and comparisons over time.
 
-![Revenue and commercial performance dashboard using fictional data](images/03-revenue-dashboard.png)
+![Revenue dashboard with fictional commercial reporting data](images/03-revenue-dashboard.png)
 
-### 4. Revenue scenario modelling
+### Scenario modelling
 
-Adjustable assumptions help explore potential revenue opportunities. **These are modelled scenarios, not realised financial results.**
+Managers can test assumptions about potential revenue improvements. **Modelled scenarios are not claimed as achieved results.**
 
-![Revenue scenario modelling interface using fictional figures](images/04-revenue-scenario-modelling.png)
+![Revenue scenario modelling using fictional figures](images/04-revenue-scenario-modelling.png)
 
-*All client names, contacts and figures shown in the screenshots are fictional demonstration data.*
+## Testing, security and release discipline
 
-## Project material
+Because the application supports live operational records and communications, reliability and access control were part of development rather than added at the end.
 
-The production application and its source repository remain private. This public case study describes the operational challenge, approach and outcomes without publishing internal data or proprietary code.
+**Functional and smoke testing.** The project used automated Vitest checks and a Playwright browser harness. Smoke checks covered login, the dashboard, client navigation and the booking flow. More involved end-to-end checks exercised booking creation, scheduling visibility and navigation consistency. Type checking, linting and regression tests supported release reviews.
 
-*The workflow diagram and four demonstration screenshots are included above.*
+**Security review and remediation.** I used Claude Code to support structured reviews of authentication, Supabase row-level security, API permissions, PostgreSQL function privileges and activity-log integrity. Reviews were followed by practical fixes and role-based tests, including attempts to perform actions or attribute changes outside the user's permissions.
+
+**Database hardening.** One review phase addressed the configuration and execution privileges of **15 database functions**. A broader least-privilege review covered **40 tables**, with validation recorded in staging; deployment and production verification were tracked separately. Selected access-control changes were also checked against production roles.
+
+**Traceability and privacy.** Role-based permissions, activity history and shared statuses make hand-offs more accountable. Production source code and business records remain private; the images here are fictional demonstrations.
+
+## Operational and commercial value
+
+The immediate benefit was less time entering and reconciling bookings. The same underlying records also made it easier to see which clients needed attention, coordinate a seasonal team and investigate commercial performance without combining separate spreadsheets.
+
+I owned the work across process design, product development and operational adoption. It was an operational improvement project first, with software built to support it.
+
+---
+
+[← Back to portfolio](../README.md) · [Recruitment agent](ai-recruitment-operations-agent.md) · [Image automation and AI vision](image-editing-automation-ai-vision.md)
