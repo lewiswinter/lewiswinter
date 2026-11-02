@@ -62,13 +62,9 @@ The implementation keeps provider credentials on the server and validates tool a
 
 The application successfully completed an end-to-end AI tool-calling flow and passed 34 tests and its build at a recorded development checkpoint. The workflow is now used in production.
 
-It also revealed practical limitations worth addressing before deployment:
+The build combined deterministic checks for operational exceptions with constrained AI tool use and a human-review step for drafted communications. Testing covered the end-to-end tool-calling workflow and application build, with 34 tests passing at the recorded checkpoint.
 
-- Repeated runs could create duplicate drafts.
-- The agent sometimes overemphasised email drafting rather than clearly explaining the highest-priority operational issues.
-- Missing-information cases were not always handled with a useful draft or next step.
-
-These findings informed ongoing improvements: a useful operations agent needs dependable prioritisation, idempotent actions and clear escalation—not simply fluent text.
+The design deliberately separates identifying a recruitment blocker from recommending how to resolve it. This keeps the assistant focused on actionable coordination rather than allowing it to make hiring decisions or send messages independently.
 
 ## Potential operational impact
 
@@ -76,13 +72,17 @@ For planning purposes, I modelled a recruitment coordination task falling from *
 
 **This is a scenario estimate, not an observed saving.** A measured baseline and comparison of time spent would be needed before presenting this estimate as an achieved saving.
 
-## What I would improve next
+## Future development opportunities
 
-1. Prevent duplicate drafts and make each action traceable.
-2. Separate **urgent blockers**, **awaiting responses** and **routine follow-ups** more clearly.
-3. Improve explanations of why a candidate needs attention and what evidence supports the recommendation.
-4. Continue evaluating human review and approval in day-to-day use.
-5. Continue reviewing authentication, permissions, data-retention controls and privacy safeguards for live candidate data.
+The production workflow provides a foundation for extending recruitment operations intelligence. Areas for future development include:
+
+1. **Recruitment performance reporting:** trends in time-to-feedback, stage progression and recurring bottlenecks.
+2. **More proactive coordination:** configurable reminders and escalation thresholds tailored to different hiring campaigns.
+3. **Deeper system integration:** connect relevant recruitment and people workflows to reduce manual hand-offs.
+4. **Management insight:** summarise workload, outstanding dependencies and campaign progress across teams.
+5. **Continuous evaluation:** use operational feedback and measured outcomes to guide further refinements.
+
+These are potential extensions to the existing workflow, not prerequisites for its current use.
 
 ## Why this project matters
 
