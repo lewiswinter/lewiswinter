@@ -17,20 +17,24 @@ Time saved is calculated from the difference in approximate handling time multip
 
 ## The operational problem
 
-A seasonal photography operation had to coordinate bookings, client relationships, photographers, deadlines and fulfilment across multiple workflows. Previously, booking information was entered across multiple Google Sheets and a separate contacts application, while emails were handled manually. Staff had to work across disconnected tools to manage the process, adding repetitive administration and making it harder to see the status of work, identify outstanding actions and maintain consistency during busy periods.
+Bookings were entered manually across multiple Google Sheets and a separate contacts application, with emails also prepared manually. This created three connected operational problems:
 
-The challenge wasn't simply to replace spreadsheets or build another dashboard. It was to connect the underlying process, reduce duplicated work and give people the information needed to act.
+1. **Time-consuming administration.** Entering one booking across several systems repeated work and took approximately 4–5 minutes.
+2. **Multiple sources of truth.** Records could become inconsistent across systems, with opportunities for human error both when entering bookings and when preparing emails.
+3. **Limited performance insight.** Legacy applications made it difficult to extract usable data for reporting, trend analysis and future operational decisions.
+
+The goal was therefore broader than replacing spreadsheets: **reduce administrative effort, improve data consistency and establish a reliable foundation for operational reporting and improvement.**
 
 ### Before and after
 
 | Before: fragmented workflow | After: integrated operational platform |
 | --- | --- |
-| Booking details spread across multiple Google Sheets | Centralised booking records and history |
-| Client information held in a separate contacts application | Searchable client records linked to operational work |
-| Emails prepared and sent manually | Communication workflows supported within the operational process |
+| Re-enter booking details across Google Sheets and a contacts application | Centralised booking records and history |
+| Multiple records to reconcile and manually prepared emails | Shared records and communication workflows supported by the system |
+| Limited ability to extract data for analysis | Structured operational data and dashboards |
 | Progress checked across different tools | Shared dashboards, task ownership and workflow visibility |
 
-*The comparison describes the workflow redesign; it does not imply every communication is fully automated.*
+*The comparison describes the workflow redesign; it does not imply every communication is fully automated or that errors have been eliminated.*
 
 ## Approach: understand, map, improve, implement, measure
 
@@ -63,7 +67,9 @@ Designed the platform around the people using it, with clearer day-to-day workfl
 
 **Faster booking administration.** A task previously taking approximately 4–5 minutes could be completed in around 1 minute using the redesigned workflow. Across an estimated 2,000 bookings annually, that represents roughly **100–133 hours of administrative capacity**.
 
-**Improved operational visibility.** Shared records, booking progress, task ownership and activity history made it easier to understand what had happened and what needed attention next.
+**Better data consistency and operational visibility.** Shared records reduced reliance on separate sources of truth, while booking progress, task ownership and activity history made it easier to understand what had happened and what needed attention next.
+
+**A foundation for analysis.** Structured records and dashboards made operational data more accessible for performance monitoring and future improvements.
 
 **A foundation for growth.** Bringing operational information and workflows together created a more consistent platform for managing seasonal volume and further improvements.
 
