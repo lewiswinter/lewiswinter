@@ -17,9 +17,20 @@ Time saved is calculated from the difference in approximate handling time multip
 
 ## The operational problem
 
-A seasonal photography operation had to coordinate bookings, client relationships, photographers, deadlines and fulfilment across multiple workflows. Repetitive administration and fragmented information made it harder for teams to see the status of work, identify outstanding actions and maintain consistency during busy periods.
+A seasonal photography operation had to coordinate bookings, client relationships, photographers, deadlines and fulfilment across multiple workflows. Previously, booking information was entered across multiple Google Sheets and a separate contacts application, while emails were handled manually. Staff had to work across disconnected tools to manage the process, adding repetitive administration and making it harder to see the status of work, identify outstanding actions and maintain consistency during busy periods.
 
-The challenge wasn't simply to replace a spreadsheet or build another dashboard. It was to make the underlying process easier to manage, reduce duplicated work and give people the information needed to act.
+The challenge wasn't simply to replace spreadsheets or build another dashboard. It was to connect the underlying process, reduce duplicated work and give people the information needed to act.
+
+### Before and after
+
+| Before: fragmented workflow | After: integrated operational platform |
+| --- | --- |
+| Booking details spread across multiple Google Sheets | Centralised booking records and history |
+| Client information held in a separate contacts application | Searchable client records linked to operational work |
+| Emails prepared and sent manually | Communication workflows supported within the operational process |
+| Progress checked across different tools | Shared dashboards, task ownership and workflow visibility |
+
+*The comparison describes the workflow redesign; it does not imply every communication is fully automated.*
 
 ## Approach: understand, map, improve, implement, measure
 
