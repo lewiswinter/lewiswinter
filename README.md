@@ -21,7 +21,7 @@ My work combines operational leadership, commercial judgement and hands-on devel
 
 ### [Operations CRM & Workflow Transformation](projects/operations-crm.md)
 
-Replaced fragmented booking records, manual follow-ups and disconnected reporting with a shared operations platform. **Booking administration fell by approximately 75–80%**, with better scheduling and commercial visibility.
+Built a **single source of truth for customer and booking data**, replacing disconnected records and creating a platform for automated emails, reminders and proactive customer follow-up. **Booking administration fell by approximately 75–80%**; the shared data also made it easier to spot unbooked clients, pursue repeat business and support growth.
 
 ### [AI Recruitment Operations Agent](projects/ai-recruitment-operations-agent.md)
 
