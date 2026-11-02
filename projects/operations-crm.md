@@ -12,7 +12,6 @@ I led the redesign of booking administration for a nursery photography operation
 | Time spent per booking | — | **Approximately 75–80% lower** |
 | Annual capacity released | — | **Estimated 100–133 hours**, across roughly 2,000 bookings |
 
-*The annual capacity figure is an estimate based on typical handling times and booking volume, not a formal time-and-motion study.*
 
 ## The problem
 
