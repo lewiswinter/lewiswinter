@@ -25,6 +25,22 @@ Recruitment creates many small administrative dependencies. A candidate may be w
 
 The goal was to reduce time spent searching for exceptions and composing routine follow-ups, so the person coordinating recruitment could focus on resolving blockers.
 
+## What the system looks like in practice
+
+The accompanying three-page product walkthrough illustrates the workflow using **10 fictional candidate records**:
+
+| Screen | Operational value |
+| --- | --- |
+| **Candidate pipeline** | A single view of candidate stage, hiring manager, interview dates, feedback deadlines and last activity, with headline counts of missing owners, overdue feedback, incomplete records and stalled stages |
+| **Attention needed** | Deterministic checks produce a consistent, prioritised exception queue with the reason for each flag and a suggested next action |
+| **Ask the agent to investigate** | An optional AI agent reviews the pipeline, identifies the three most important issues, explains urgency, business impact and uncertainty, and prepares editable follow-up drafts |
+
+The third screen is particularly useful evidence of the system's design: the agent's response shows **priorities, supporting evidence, why each issue matters, a proposed action and a draft communication**. The user can edit, copy, discard or approve the draft locally. The demonstration explicitly indicates that no emails were sent.
+
+The sample also shows why combining rules with AI is useful. A missing hiring manager is flagged deterministically, but the AI can explain why that missing ownership blocks progress and recommend a coordinator-led verification rather than assigning someone automatically.
+
+*The screenshots use synthetic records and demonstrate functionality; they are not a claim about live candidate counts or achieved recruitment outcomes.*
+
 ## How I approached it
 
 ### 1. Translate operational issues into explicit checks
@@ -47,7 +63,7 @@ The assistant can use defined functions to list candidates, inspect attention it
 
 ```mermaid
 flowchart LR
-    A["Fictional candidate records"] --> B["Rules identify exceptions"]
+    A["Candidate records"] --> B["Rules identify exceptions"]
     B --> C["Attention queue"]
     C --> D["AI reviews available evidence"]
     D --> E["Suggested priorities and draft follow-ups"]
