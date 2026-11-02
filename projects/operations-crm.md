@@ -42,7 +42,7 @@ Built using **Next.js, TypeScript and Supabase (PostgreSQL, authentication and r
 | Separate information needed for scheduling | A shared field schedule linked to the booking workflow |
 | Limited ability to compare performance | Structured reporting across clients, booking targets and revenue |
 
-The most useful change was not another dashboard. It was making the next action clear to the people coordinating the work.
+Staff could see who owned the next action without checking several different tools.
 
 ## Platform walkthrough
 
