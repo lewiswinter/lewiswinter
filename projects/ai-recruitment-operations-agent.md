@@ -4,9 +4,9 @@
 
 Recruitment across a distributed workforce involves more than screening applications. Hiring managers need to respond, candidate records need to be complete, and someone has to keep track of what is waiting on whom. When this work sits across inboxes and spreadsheets, delays are easy to miss.
 
-I built a working AI-assisted recruitment operations prototype to test how much of that coordination could be surfaced automatically, while keeping decisions and external communications under human control.
+I built and put into production an AI-assisted recruitment operations workflow to surface coordination issues automatically, while keeping decisions and external communications under human control.
 
-> **Status:** Tested local prototype using 10 fictional candidate records. Not a deployed production system. Any time savings below are illustrative estimates, not measured results.
+> **Status:** In production. The technical testing described below used 10 fictional candidate records; those test records should not be confused with live recruitment data. Any time savings below are illustrative estimates, not measured results.
 
 ## At a glance
 
@@ -17,7 +17,7 @@ I built a working AI-assisted recruitment operations prototype to test how much 
 | **My role** | Defined the operational problem, designed the workflow, built and tested the application and AI integration |
 | **Safeguards** | Fictional test data, server-held API keys, validated tool actions, bounded agent execution and human approval before communications |
 | **Technology** | TypeScript, AI tool calling via an OpenAI-compatible provider, automated tests |
-| **Evidence** | Working end-to-end tool-calling flow; 34 tests and build passing at the recorded development checkpoint |
+| **Evidence** | Production use, with working end-to-end tool calling; 34 tests and build passing at the recorded development checkpoint |
 
 ## The operational problem
 
@@ -56,11 +56,11 @@ flowchart LR
 
 ### 4. Put limits around the automation
 
-The implementation keeps provider credentials on the server and validates tool actions. Agent runs are bounded to prevent uncontrolled loops. Drafts remain drafts: the prototype does not autonomously send emails, reject applicants or make hiring decisions.
+The implementation keeps provider credentials on the server and validates tool actions. Agent runs are bounded to prevent uncontrolled loops. Drafts remain drafts: the agent does not autonomously send emails, reject applicants or make hiring decisions.
 
-## What the prototype demonstrated
+## Implementation and testing
 
-The local application successfully completed an end-to-end AI tool-calling flow and passed 34 tests and its build at a recorded development checkpoint.
+The application successfully completed an end-to-end AI tool-calling flow and passed 34 tests and its build at a recorded development checkpoint. The workflow is now used in production.
 
 It also revealed practical limitations worth addressing before deployment:
 
@@ -68,21 +68,21 @@ It also revealed practical limitations worth addressing before deployment:
 - The agent sometimes overemphasised email drafting rather than clearly explaining the highest-priority operational issues.
 - Missing-information cases were not always handled with a useful draft or next step.
 
-These are important findings: a useful operations agent needs dependable prioritisation, idempotent actions and clear escalation—not simply fluent text.
+These findings informed ongoing improvements: a useful operations agent needs dependable prioritisation, idempotent actions and clear escalation—not simply fluent text.
 
 ## Potential operational impact
 
 For planning purposes, I modelled a recruitment coordination task falling from **2 hours to 30 minutes per week**. That would represent **90 minutes of potential weekly capacity**, or **18 hours over a 12-week campaign**.
 
-**This is a scenario estimate, not an observed saving.** The next step would be to pilot with real users, establish a baseline, measure time spent and assess whether the recommendations are actually useful.
+**This is a scenario estimate, not an observed saving.** A measured baseline and comparison of time spent would be needed before presenting this estimate as an achieved saving.
 
 ## What I would improve next
 
 1. Prevent duplicate drafts and make each action traceable.
 2. Separate **urgent blockers**, **awaiting responses** and **routine follow-ups** more clearly.
 3. Improve explanations of why a candidate needs attention and what evidence supports the recommendation.
-4. Test human review and approval with real workflows before considering deployment.
-5. Add appropriate authentication, permissions, data-retention controls and privacy review before any use of live candidate data.
+4. Continue evaluating human review and approval in day-to-day use.
+5. Continue reviewing authentication, permissions, data-retention controls and privacy safeguards for live candidate data.
 
 ## Why this project matters
 
