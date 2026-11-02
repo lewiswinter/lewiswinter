@@ -1,54 +1,38 @@
-# Hi, I'm Lewis 👋
+# Lewis Winter
 
-### Operations & Business Transformation | Process Improvement | AI & Automation
+**Commercial Operations · Business Transformation · Practical AI Implementation**
 
-**I find problems, improve processes and build solutions that make businesses work better.**
+I've led commercial and operational improvements in a high-volume nursery photography business, covering new business, seasonal delivery, recruitment, team development and commercial performance.
 
-My background is in commercial and operational leadership, with hands-on experience improving how businesses operate, how teams work and how technology supports them.
+Alongside managing the day-to-day operation, I've redesigned processes and built internal tools to make the work easier to manage. That has included moving ordering online, developing a CRM around the team's actual workflow, and putting image-processing and recruitment automations into production.
 
-I enjoy getting into the detail of how an organisation works - understanding the people, mapping workflows, identifying bottlenecks and finding opportunities to make things simpler, faster and more effective.
+## Selected results
 
-Sometimes the answer is a small process change. Sometimes it's an automation. Other times, it's an AI-powered workflow or an entirely new operational platform.
+| Outcome | Context |
+| --- | --- |
+| **~30% reduction in annual operating costs** | Wider operational and digital changes across the business, not a result attributed to one software project |
+| **75–80% less booking administration time** | A redesigned process reduced a typical booking from roughly 4–5 minutes to around 1 minute |
+| **~100–133 hours of annual admin capacity** | Estimated from approximately 2,000 bookings per year |
+| **~40 photographers trained** | Recruitment, training and operational consistency across a seasonal workforce |
 
-I'm comfortable working across the full journey, from identifying the problem and designing a solution through to building, implementing, training teams and measuring the impact.
-
-## How I approach operational improvement
-
-**Understand → Map → Improve → Implement → Measure**
-
-- **Understand the problem:** Work with people to uncover operational friction, inefficiencies and opportunities.
-- **Map the process:** Understand how people, systems, information and decisions fit together.
-- **Design the solution:** Choose the right intervention, from process simplification to automation or AI.
-- **Make it happen:** Build solutions directly, individually, or collaborate with technical specialists and manage implementation.
-- **Embed and improve:** Support adoption, measure outcomes and refine what works.
+My work combines operational leadership, commercial judgement and hands-on development. I'm comfortable moving between the people using a process, the numbers behind it and the systems needed to improve it.
 
 ## Selected projects
 
 ### [Operations CRM & Workflow Transformation](projects/operations-crm.md)
 
-Designed and developed a custom operational platform to bring fragmented processes into one system, improving visibility, reducing administration and supporting teams at scale and growth.
-
-**Focus:** Operational improvement · Process mapping · Systems integration · Change management
+Replaced fragmented booking records, manual follow-ups and disconnected reporting with a shared operations platform. **Booking administration fell by approximately 75–80%**, with better scheduling and commercial visibility.
 
 ### [AI Recruitment Operations Agent](projects/ai-recruitment-operations-agent.md)
 
-Implemented a production AI-assisted workflow to manage recruitment administration, surface outstanding actions and prepare communications while keeping people in control of decisions.
-
-**Focus:** AI implementation · Workflow automation · Human oversight · Operational efficiency
+Built a production workflow that identifies overdue feedback, missing ownership and stalled applications, then uses an AI assistant to investigate priorities and prepare follow-ups for human review.
 
 ### [Image Editing Automation & AI Vision Experiment](projects/image-editing-automation-ai-vision.md)
 
-Built production black-and-white image automation integrated with Netlife APIs, alongside a locally evaluated computer vision experiment for automated crop selection.
-
-**Focus:** Production automation · API integration · Local image processing · Computer vision evaluation
-
-## Beyond the technology
-
-My experience also covers commercial growth, people leadership, operational planning, recruitment, training and organisational change.
-
-I believe the best improvements come from understanding the business first — and using technology only where it adds genuine value.
+Implemented local black-and-white image automation integrated with Netlife, **reducing proofing time and contributing to improved average order value**. Separately, tested computer vision approaches to photographic cropping against reference results.
 
 ---
 
-**Based in the UK**  
-Interested in Operations Leadership, Strategy & Operations, Business Transformation and practical AI implementation.
+Based near Bristol, UK. Interested in **operations leadership, strategy and operations, business transformation and practical AI implementation**.
+
+*Project screenshots use fictional demonstration data. Employer source code and operational records are not public.*
