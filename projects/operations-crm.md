@@ -13,11 +13,11 @@
 | Annual booking volume used for estimate | Approximately 2,000 |
 | Estimated annual capacity released | Approximately 100–133 administration hours |
 
-*These are operational estimates, not independently audited results. Time saved is calculated from the difference in approximate handling time multiplied by annual booking volume.*
+Time saved is calculated from the difference in approximate handling time multiplied by annual booking volume.
 
 ## The operational problem
 
-A seasonal photography operation had to coordinate bookings, nursery relationships, photographers, deadlines and fulfilment across multiple workflows. Repetitive administration and fragmented information made it harder for teams to see the status of work, identify outstanding actions and maintain consistency during busy periods.
+A seasonal photography operation had to coordinate bookings, client relationships, photographers, deadlines and fulfilment across multiple workflows. Repetitive administration and fragmented information made it harder for teams to see the status of work, identify outstanding actions and maintain consistency during busy periods.
 
 The challenge wasn't simply to replace a spreadsheet or build another dashboard. It was to make the underlying process easier to manage, reduce duplicated work and give people the information needed to act.
 
@@ -60,7 +60,7 @@ Designed the platform around the people using it, with clearer day-to-day workfl
 
 I combined operational knowledge and process improvement with hands-on product development: identifying the problem, mapping the workflow, designing the approach, building the platform and iterating around staff needs.
 
-The aim was never technology for its own sake. It was to simplify the work and make the operation easier to run.
+The aim was to simplify the work and make the operation easier to run.
 
 ## Project material
 
