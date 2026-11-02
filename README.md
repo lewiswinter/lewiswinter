@@ -24,7 +24,7 @@ I'm comfortable working across the full journey, from identifying the problem an
 
 ## Selected projects
 
-### Operations CRM & Workflow Transformation
+### [Operations CRM & Workflow Transformation](projects/operations-crm.md)
 
 Designed and developed a custom operational platform to bring fragmented processes into one system, improving visibility, reducing administration and supporting teams at scale and growth.
 
