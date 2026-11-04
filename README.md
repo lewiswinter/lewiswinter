@@ -1,4 +1,4 @@
-# Lewis Winter
+# Hi! I'm Lewis
 
 **Commercial Operations · Business Transformation · Practical AI Implementation**
 
