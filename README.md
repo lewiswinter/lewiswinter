@@ -33,6 +33,6 @@ Implemented local black-and-white image automation integrated with Netlife, **re
 
 ---
 
-Based near Bristol, UK. Interested in **operations leadership, strategy and operations, business transformation and practical AI implementation**.
+Based in the UK. Interested in **operations leadership, strategy and operations, business transformation and practical AI implementation**.
 
 *Project screenshots use fictional demonstration data. Employer source code and operational records are not public.*
